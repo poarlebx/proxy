@@ -41,7 +41,7 @@ rhel5 ()	{
 	# Downloading and installing necessary repo for newer Squid 3 versions for CentOS 5
 	rpm -Uvh http://flexbox.sourceforge.net/centos/5/i386/flexbox-release-1-4.3.noarch.rpm
 	# Installing necessary packages (Squid, httpd for htpasswd and dependencies)
-	yum install perl-DBI libecap squid httpd -y
+	sudo apt install perl-DBI libecap squid httpd -y
 	# Asking user to set a username via read and writing it into $usrn
 	read -e -p "Your desired username: " usrn
 	# Creating user with username from $usrn and asking user to set a password
@@ -66,7 +66,7 @@ rhel5 ()	{
 # Function for RHEL 6 Linux distributions
 rhel6 ()	{
 	# Installing necessary packages (Squid, httpd-tools for htpasswd and dependencies)
-	yum install squid httpd-tools -y
+	sudo apt install squid httpd-tools -y
 	# Asking user to set a username via read and writing it into $usrn
 	read -e -p "Your desired username: " usrn
 	# Creating user with username from $usrn and asking user to set a password
@@ -89,7 +89,7 @@ rhel6 ()	{
 # Function for RHEL 7 Linux distributions
 rhel7 ()	{
 	# Installing necessary packages (Squid, httpd-tools for htpasswd and dependencies)
-	yum install nano dos2unix squid httpd-tools -y
+	sudo apt install nano dos2unix squid httpd-tools -y
 	# Asking user to set a username via read and writing it into $usrn
 	read -e -p "Your desired username: " usrn
 	# Creating user with username from $usrn and asking user to set a password
@@ -213,7 +213,7 @@ ubt_null ()	{
 # Function for Fedora
 fed () {
 	# Installing necessary packages (Squid, httpd-tools for htpasswd and dependencies)
-	yum install squid httpd-tools -y
+	sudo apt install squid httpd-tools -y
 	# Asking user to set a username via read and writing it into $usrn
 	read -e -p "Your desired username: " usrn
 	# Creating user with username from $usrn and asking user to set a password
